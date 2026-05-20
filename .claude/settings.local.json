@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(flutter create *)",
+      "PowerShell(flutter devices *)",
+      "Bash(dart pub *)",
+      "Bash(dart server.dart)",
+      "Bash(Start-Sleep -Seconds 2)",
+      "Bash(curl http://localhost:8080/health)",
+      "Bash(flutter run *)",
+      "Bash(curl -s http://localhost:55088)",
+      "Bash(git init *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
