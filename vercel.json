@@ -1,9 +1,6 @@
 {
   "buildCommand": "flutter build web",
   "outputDirectory": "build/web",
-  "env": {
-    "ANTHROPIC_API_KEY": "@anthropic_api_key"
-  },
   "rewrites": [
     {
       "source": "/api/:path*",
