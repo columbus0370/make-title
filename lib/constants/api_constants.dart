@@ -1,7 +1,7 @@
 class ApiConstants {
-  // ローカルプロキシサーバーのエンドポイント
+  // Vercel Serverless Functions のエンドポイント
   // APIキーはサーバー側で安全に管理
-  static const String apiBaseUrl = 'http://localhost:8080/api/generate-titles';
+  static const String apiBaseUrl = '/api/generate-titles';
 
   // APIキーはサーバー側で管理（クライアント側では不要）
   static const String apiKey = '';
