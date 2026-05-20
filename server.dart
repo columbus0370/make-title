@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 
-final String anthropicApiKey = Platform.environment['ANTHROPIC_API_KEY'] ?? '';
+final String anthropicApiKey = 'sk-ant-YOUR_API_KEY_HERE';
 const String anthropicApiBaseUrl = 'https://api.anthropic.com/v1/messages';
 const String anthropicVersion = '2024-06-01';
 
@@ -54,7 +54,7 @@ Future<void> _generateTitles(HttpRequest request) async {
   try {
     final body = await utf8.decodeStream(request);
 
-    if (anthropicApiKey == 'sk-ant-YOUR_API_KEY_HERE') {
+    if (anthropicApiKey.isEmpty || anthropicApiKey == 'sk-ant-YOUR_API_KEY_HERE') {
       request.response.statusCode = 400;
       request.response.write(jsonEncode({'error': 'APIキーが設定されていません。server.dartを確認してください。'}));
       await request.response.close();
